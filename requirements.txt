@@ -4,4 +4,4 @@ streamlit==1.30.0
 xgboost==1.6.2
 Requests==2.32.3
 streamlit_lottie==0.0.5
-scikit-learn==1.5.1
+scikit-learn==1.5.2
