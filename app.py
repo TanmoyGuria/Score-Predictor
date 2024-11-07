@@ -12,17 +12,13 @@ import base64
 
 
 # Function to set the background image
-def set_background(image_path):
-    # Read the image file and encode it to base64
-    with open(image_path, "rb") as image_file:
-        encoded_image = base64.b64encode(image_file.read()).decode()
-    
-    # Set the background image with custom CSS
+def set_background(image_url):
+    # Set the background image with custom CSS using a URL
     st.markdown(
         f"""
         <style>
         .stApp {{
-            background-image: url("data:image/jpeg;base64,{encoded_image}");
+            background-image: url("{image_url}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -32,9 +28,9 @@ def set_background(image_path):
         unsafe_allow_html=True
     )
 
-# Set the path to your local image file
-image_path = "C:/Users/Tanmo/Downloads/Score.jpg"  # Replace this with the actual path to your image file
-set_background(image_path)
+# Set the URL to your image file
+image_url = "https://i.postimg.cc/4xPqXTL6/Score.jpg"  # Replace this with the actual URL of your image
+set_background(image_url)
 st.title("T20 Score Predictor")
 teams = ['Australia',
  'India',
